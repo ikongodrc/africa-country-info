@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html,
+body {
+    text-align: center;
+    min-width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+    position: relative;
+    display: inline-block;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 60% 38%;
+    grid-gap: 10px;
+    position: relative;
+    max-width: 70%;
+    margin: auto;
+}
+
+.st0 {
+    fill: #2FAA9F;
+    fill-opacity: 1;
+    stroke: #ebebeb;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+    stroke-miterlimit: 3.97446823;
+    stroke-dasharray: none;
+}
+
+#flag>img {
+    width: 100%;
+    margin: auto;
+}
+
+.map,
+#flag,
+#capital,
+#currency {
+    display: inline-grid;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px;
+    animation: fade-in 3.5s forwards;
+}
+
+.map p,
+.map img,
+#flag p,
+#flag img,
+#capital p,
+#capital img,
+#currency p,
+#currency img {
+    animation: fade-in 3s forwards;
+}
+
+.map p,
+#flag p,
+#capital p,
+#currency p {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.map {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#flag {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#capital {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 5px;
+}
+
+#currency {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 5px;
+}
+
+span {
+    font-size: 24px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    body,
+    html {
+        max-width: 90%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: inline-block;
+        max-width: 90%;
+    }
+
+    .map {
+        display: inline-block;
+        margin: auto;
+        width: 90%;
+        padding: 10px;
+        border: none;
+    }
+
+    #flag,
+    #capital,
+    #currency {
+        display: inline-block;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    #currency,
+    #flag {
+        border-top: none;
+    }
+}
